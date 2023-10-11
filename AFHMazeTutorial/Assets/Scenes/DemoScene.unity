@@ -133,9 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 249736766}
   - component: {fileID: 249736765}
-  - component: {fileID: 249736764}
   - component: {fileID: 249736763}
   - component: {fileID: 249736767}
+  - component: {fileID: 249736768}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -170,19 +170,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &249736764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249736762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eade98331acc45a99a9aa8117a00baf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canInteract: 0
 --- !u!212 &249736765
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -295,6 +282,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &249736768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249736762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0b1e43e33ab48cd8ca12ab2a959e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canInteract: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,7 +2162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0.44521236, a: 1}
   m_FlipX: 0
@@ -2243,7 +2243,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1136152435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399647064e22944df80ab485acd0a927, type: 3}
+  m_Script: {fileID: 11500000, guid: b814ff5a917bf45a4ae799f6e29c48cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1273123336
@@ -2287,17 +2287,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1273123336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5b1fb16304df4965b83e18d8b0bc204, type: 3}
+  m_Script: {fileID: 11500000, guid: f2a41bc44a45344bd8f85773f4242a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelComplete: 0
-  score: 0
-  totalScore: 0
-  timer: 30
   LevelCompleteText: {fileID: 1435169536}
-  AllCoinsCollected: {fileID: 0}
-  scoreText: {fileID: 0}
-  timerText: {fileID: 0}
 --- !u!1 &1435169534
 GameObject:
   m_ObjectHideFlags: 0
