@@ -12,10 +12,17 @@ public class PlayerController : MonoBehaviour
     //REFERENCES//
     private Rigidbody2D rb2d; //Reference to the Player's Rigidbody2D (Physics and Movement)
     private GameManager gm; //Reference to the GameManager
+    private SpriteRenderer playerSprite;
+
+    public Sprite leftSprite;
+    public Sprite rightSprite;
+    public Sprite upSprite;
+    public Sprite downSprite;
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
@@ -29,6 +36,42 @@ public class PlayerController : MonoBehaviour
         {
             move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             rb2d.MovePosition(rb2d.position + (move * speed * Time.deltaTime));
+
+            if(move.y > 0)
+            {
+                playerSprite.sprite = upSprite;
+                if(move.x > 0)
+                {
+                    playerSprite.sprite = rightSprite;
+                }
+                else if(move.x < 0)
+                {
+                    playerSprite.sprite = leftSprite;
+                }
+            }
+            else if(move.y == 0)
+            {
+                if(move.x > 0)
+                {
+                    playerSprite.sprite = rightSprite;
+                }
+                else if(move.x < 0)
+                {
+                    playerSprite.sprite = leftSprite;
+                }
+            }
+            else if (move.y < 0)
+            {
+                playerSprite.sprite = downSprite;
+                if(move.x > 0)
+                {
+                    playerSprite.sprite = rightSprite;
+                }
+                else if(move.x < 0)
+                {
+                    playerSprite.sprite = leftSprite;
+                }
+            }
         }
 
 

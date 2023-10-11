@@ -244,6 +244,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
+  leftSprite: {fileID: 21300000, guid: 93f7cfb14ee20410aad7b57b6903b651, type: 3}
+  rightSprite: {fileID: 21300000, guid: 5609a6694f9d641478979c48476fff76, type: 3}
+  upSprite: {fileID: 21300000, guid: 934d7b8eb22b347838b81a0f8e425810, type: 3}
+  downSprite: {fileID: 21300000, guid: ed6eac7a244324e91bd03aafab9b1b3d, type: 3}
 --- !u!212 &249736765
 SpriteRenderer:
   m_ObjectHideFlags: 0
